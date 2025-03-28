@@ -1,0 +1,14 @@
+﻿
+@model List<Subject>
+<h2>Subjects</h2>
+
+@foreach (var _subject in @Model)
+{
+    <div style="border: 1px solid black; padding: 10px; width: 300px; text-align: center;">
+    <p><strong>ID:  </strong> @_subject.Id</p>
+    <p><strong>Name:</strong> @_subject.Name</p>
+
+        <p><a style="border: 1px dotted black;" class="nav-link text-dark" asp-area="" asp-controller="Subject" asp-action="Edit" asp-route-id="@_subject.Id" asp-route-id="1">Edit</a></p>
+        <p><a style="border: 1px dotted black;" class="nav-link text-dark" asp-area="" asp-controller="Subject" asp-action="Delete" asp-route-id="@_subject.Id" asp-route-id="1">Delete</a></p>
+    </div>
+}
