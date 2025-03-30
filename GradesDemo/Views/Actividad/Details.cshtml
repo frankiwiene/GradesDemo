@@ -12,6 +12,8 @@
         <p><strong>Grade:</strong> @_actividad.Grade</p>
         <p><strong>SubjectId:</strong>@_actividad.SubjectId</p>
         <p><strong>Subject:</strong> @(_actividad.Subject != null ? _actividad.Subject.Name : " Sin Subject")</p>
+        <p><a style="border: 1px dotted black;" class="nav-link text-dark" asp-area="" asp-controller="Subject" asp-action="Edit" asp-route-id="@_actividad.Id" asp-route-id="1">Edit</a></p>
+        <p><a style="border: 1px dotted black;" class="nav-link text-dark" asp-area="" asp-controller="Subject" asp-action="Delete" asp-route-id="@_actividad.Id" asp-route-id="1">Delete</a></p>
     </div>
 }
 
